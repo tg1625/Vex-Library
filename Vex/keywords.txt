@@ -1,0 +1,9 @@
+Vex	KEYWORD1
+Gyro KEYWORD1
+Touch KEYWORD1
+moveMotor	KEYWORD2
+moveTank	KEYWORD2
+setMotor	KEYWORD2
+getZAngle	KEYWORD2
+getYAngle	KEYWORD2
+getXAngle	KEYWORD2
