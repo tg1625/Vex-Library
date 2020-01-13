@@ -251,3 +251,20 @@ long Ultrasonic::checkUltrasonic() {
     delay(500);
     return distance;
 }
+
+/*
+IRObstacle
+- class for the IR Obstacle Avoidance sensor
+*/
+
+IRObstacle::IRObstacle(int digitalPin) : pin(digitalPin){}
+void IRObstacle::begin(){
+pinMode(pin,INPUT);
+}
+bool IRObstacle::isObstacle(){
+ if (digitalRead(pin) == LOW){
+   return true;
+ }
+ return false;
+}
+

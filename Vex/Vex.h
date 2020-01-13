@@ -5,8 +5,8 @@
  - All sensors are added.
 */
 
-#ifndef NewVEX_h
-#define NewVEX_h
+#ifndef Vex_h
+#define Vex_h
 
 #include "Arduino.h"
 #include "Adafruit_MotorShield.h"
@@ -63,6 +63,17 @@ private:
     VectorFloat gravity;    // [x, y, z]            gravity vector
     float euler[3];         // [psi, theta, phi]    Euler angle container
 };
+
+class IRObstacle{
+public:
+  IRObstacle(int digitalPin);
+  void begin(); //begin method for setup 
+  bool isObstacle();
+private:
+  int pin; //digital pin
+ 
+};
+	
 
 class Vex {
 public:
