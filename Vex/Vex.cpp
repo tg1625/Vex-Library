@@ -217,10 +217,10 @@ bool Touch::isPushed() {
     int buttonState = analogRead(touchPin);
     if (buttonState != 0) {
         delay(100);
-        return true;
+        return false;
     }
     Serial.println("Pushed");
-    return false;
+    return true;
 }
 
 // Ultrasonic class constructor
