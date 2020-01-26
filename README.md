@@ -13,3 +13,12 @@ This is a compilation of various libraries from third-parties as well as code ma
 	- **Edited** third party library for the MPU6050 gyro
 - Vex
 	- Main library for the VEX robots
+	
+# Sensors
+
+The third party libraries, along with additional implementations in the main VEX library enable Arduino to interact with the following sensors:
+
+- Gyro Sensor (MPU6050)
+- Ultrasonic Sensor (VEX brand & HC-SR04)
+- Touch Sensors (VEX Brand & TTP223B)
+- IR Range Sensor (EK1254)
