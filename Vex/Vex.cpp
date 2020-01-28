@@ -209,13 +209,13 @@ touchPin(pinNum)
 // Touch is supposed to
 void Touch::begin() {
     Serial.println("Starting up Touch");
-    pinMode(touchPin, INPUT);
+    pinMode(touchPin, INPUT_PULLUP);
 }
 
 // function to see if touch sensor is pushed
 bool Touch::isPushed() {
-    int buttonState = analogRead(touchPin);
-    if (buttonState != 0) {
+    int buttonState = digitalRead(touchPin);
+    if (buttonState == 1) {
         delay(100);
         return false;
     }
