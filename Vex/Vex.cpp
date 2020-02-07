@@ -201,57 +201,6 @@ bool Gyro::getEulerAngles() {
     return false;
 }
 
-// Touch class constructor
-Touch::Touch(int pinNum):
-touchPin(pinNum)
-{}
-
-// Touch is supposed to
-void Touch::begin() {
-    Serial.println("Starting up Touch");
-    pinMode(touchPin, INPUT_PULLUP);
-}
-
-// function to see if touch sensor is pushed
-bool Touch::isPushed() {
-    int buttonState = digitalRead(touchPin);
-    if (buttonState == 1) {
-        delay(100);
-        return false;
-    }
-    Serial.println("Pushed");
-    return true;
-}
-
-// Ultrasonic class constructor
-Ultrasonic::Ultrasonic(int pinNum1, int pinNum2):
-trigPin(pinNum1), echoPin(pinNum2)
-{}
-
-// Ultrasonic is supposed to
-void Ultrasonic::begin() {
-    Serial.println("Starting up Ultrasonic");
-    // initialize the pulse pin as output:
-    pinMode(trigPin, OUTPUT);
-    // initialize the echo pin as an input:
-    pinMode(echoPin, INPUT);
-}
-
-// return current distance
-long Ultrasonic::checkUltrasonic() {
-    digitalWrite(trigPin, LOW);
-    delayMicroseconds(2);
-    digitalWrite(trigPin, HIGH);
-    delayMicroseconds(10);
-    digitalWrite(trigPin, LOW);
-    long distance = pulseIn(echoPin,HIGH);
-    distance = distance*(171.5/pow(10,4));
-    Serial.println("Centimeters:  ");
-    Serial.println(distance, DEC);
-    delay(500);
-    return distance;
-}
-
 /*
 IRObstacle
 - class for the IR Obstacle Avoidance sensor
