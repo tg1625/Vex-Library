@@ -100,7 +100,6 @@ void dmpDataReady() {
     mpuInterrupt = true;
 }
 
-
 //REQUIRED in setup function
 void Gyro::begin() {
     //join I2C bus
