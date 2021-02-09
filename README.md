@@ -1,6 +1,6 @@
 # Welcome to the VEX Library
 
-This is a compilation of various libraries from third-parties as well as code made in-house to easily interact with VEX robots. The code is to be used with an Arduino and the Adafruit Motor Shield. This was made for New York University's Tandon School of Engineering Introduction to Engineering & Design (EG1003).
+The code is to be used with an Arduino and the Adafruit Motor Shield. This library was made for New York University's Tandon School of Engineering Introduction to Engineering & Design (EG1003), to be used when completing Robotics projects using VEX structural components. This is a compilation of various libraries from third-parties as well as a new library made in-house to easily interact with the Arduino Uno and Adafruit Motor Shield used in these robotics projects. Full documentation for this library can be found [here](https://manual.eg.poly.edu/index.php/VEX_Library_Guide) 
 
 
 # Files
